@@ -1,0 +1,9 @@
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.ADOData.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.ADOData.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.Core.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.DALInterfaces.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.Core.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\bin\Debug\QulixProject.DALInterfaces.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\obj\Debug\QulixProject.ADOData.csprojResolveAssemblyReference.cache
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\obj\Debug\QulixProject.ADOData.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.ADOData\obj\Debug\QulixProject.ADOData.pdb

@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "View tasks";
+}
+@using QulixProject.Core.Entities
+@using QulixProject.UI.Models
+@model QulixProject.UI.Models.TaskListViewModel
+
+ <a href="@Url.Action("AddTask","Home", FormMethod.Get)" class="btn btn-danger" style="margin:15px;">Add Task</a>
+
+<div class="table table-bordered" style="margin:15px">
+    @if (Model.Tasks.Any())
+    {
+        var performers = new List<Performer>();
+        foreach (var task in Model.Tasks)
+        {
+            performers.Add(task.Performer);
+        }
+    <table>
+            <tr>
+                <th>Name</th>
+                <th>Worload</th>
+                <th>StartDate</th>
+                <th>EndDate</th>
+                <th>Status</th>
+                <th>PerformerId</th>
+            </tr>
+            @foreach (var task in Model.Tasks)
+            {
+                <tr class="record">
+                    <td>@task.Name</td>
+                    <td>@task.Workload</td>
+                    <td>@task.StartDate</td>
+                    <td>@task.EndDate</td>
+                    <td>@task.Status</td>
+                    <td>@task.Performer.ToString()</td>
+                    <td class="btn-edit-delete">
+                        @{
+                            var textD = "d" + @task.Id;
+                            var textE = "e" + @task.Id;
+                        }
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#@textD">Delete</button>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#@textE">Edit</button>
+                    </td>
+
+                    @Html.Partial("DeleteEntity", new DeleteEntityModel()
+                    {
+                        Id = task.Id,
+                        HeaderText = "Delete entity",
+                        BodyText = string.Format("Are you sure you want to delete this entity?"),
+                        Url = Url.Action("DeleteTasks", "Home", new { idValue = task.Id })
+                    })
+
+                    @Html.Partial("EditTask", new EditTaskPartialViewModel()
+                    {
+                        Id = task.Id,
+                        HeaderText = "Edit entity",
+                        BodyText = string.Format("Are you sure you want to edit this entity?"),
+                        Name = task.Name,
+                        Workload = task.Workload,
+                        StartDate = task.StartDate,
+                        EndDate = task.EndDate,
+                        Status = task.Status,
+                        PerformerId = task.PerformerId,
+                        PerformerModels = performers
+                    })
+                </tr>
+            }
+        </table>
+    }
+</div>
+
+@section scripts {
+    <script src="/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+}
+
+@section styles {
+    <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+}

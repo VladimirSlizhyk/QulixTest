@@ -1,0 +1,7 @@
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\bin\Debug\QulixProject.BLInterfaces.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\bin\Debug\QulixProject.BLInterfaces.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\bin\Debug\QulixProject.Core.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\bin\Debug\QulixProject.Core.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\obj\Debug\QulixProject.BLInterfaces.csprojResolveAssemblyReference.cache
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\obj\Debug\QulixProject.BLInterfaces.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.BLInterfaces\obj\Debug\QulixProject.BLInterfaces.pdb

@@ -1,0 +1,95 @@
+﻿@using Microsoft.Ajax.Utilities
+@using QulixProject.UI.Models
+@model QulixProject.UI.Models.AddTaskViewModel
+
+@{
+    ViewBag.Title = "Add task";
+}
+
+<h1>Add task</h1>
+
+@using (Html.BeginForm("AddTask", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Task Model</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Workload)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Workload)
+            @Html.ValidationMessageFor(model => model.Workload)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDate, new { type = "time" })
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndDate)
+            @Html.ValidationMessageFor(model => model.EndDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status, new { @class = "col-md-4 control-label" })
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Status, new SelectList(
+                new List<Object>
+                {
+                    new {value = 0, text = "NonStarted"},
+                    new {value = 1, text = "InProgress"},
+                    new {value = 2, text = "Completed"},
+                    new {value = 3, text = "Postponed"}
+                },
+                "value",
+                "text",
+                2), new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+        </div>
+        
+        @{
+            var list = new List<Object>();
+            foreach (var performer in Model.PerformerModels)
+            {
+                list.Add(new {value=performer.Id, text=performer.ToString()});
+            }
+        }
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PerformerId, new { @class = "col-md-4 control-label" })
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.PerformerId, new SelectList(
+                list,
+                "value",
+                "text",
+                2), new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PerformerId, "", new { @class = "text-danger" })
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,5 @@
+S:\Volaf\QulixProject\QulixProject\QulixProject.Core\bin\Debug\QulixProject.Core.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.Core\bin\Debug\QulixProject.Core.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.Core\obj\Debug\QulixProject.Core.dll
+S:\Volaf\QulixProject\QulixProject\QulixProject.Core\obj\Debug\QulixProject.Core.pdb
+S:\Volaf\QulixProject\QulixProject\QulixProject.Core\obj\Debug\QulixProject.Core.csprojResolveAssemblyReference.cache

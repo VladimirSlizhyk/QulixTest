@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "View performers";
+}
+
+@using QulixProject.UI.Models
+@model QulixProject.UI.Models.PerformerListViewModel
+
+<a href="@Url.Action("AddPerformer","Home", FormMethod.Get)" class="btn btn-danger" style="margin:15px;">Add Performers</a>
+
+<div class="table table-bordered">
+    @if (Model.Performers.Any())
+    {
+        <table class="table table-bordered" style="margin:15px">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>PatronymicName</th>
+            </tr>
+            @foreach (var performer in Model.Performers)
+            {
+                <tr class="record">
+                    <td>@performer.FirstName</td>
+                    <td>@performer.LastName</td>
+                    <td>@performer.PatronymicName</td>
+                    <td class="btn-edit-delete">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#@performer.Id">Delete</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Edit</button>
+                    </td>
+
+                    @Html.Partial("DeleteEntity", new DeleteEntityModel()
+                    {
+                        Id = performer.Id,
+                        HeaderText = "Delete entity",
+                        BodyText = string.Format("Are you sure you want to delete this entity?"),
+                        Url = Url.Action("DeletePerformers", "Home", new { idValue = performer.Id })
+                    })
+                </tr>
+            }
+        </table>
+    }
+</div>
+
+@section scripts {
+    <script src="/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+}
+
+@section styles {
+    <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+}

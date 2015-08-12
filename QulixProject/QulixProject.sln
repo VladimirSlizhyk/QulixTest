@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.Core", "QulixProject.Core\QulixProject.Core.csproj", "{CB1B8DDE-2944-4442-930D-9BC4E3E79A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.DALInterfaces", "QulixProject.DALInterfaces\QulixProject.DALInterfaces.csproj", "{317F5E39-1F7C-4DD4-A68E-A86EF20F1300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.ADOData", "QulixProject.ADOData\QulixProject.ADOData.csproj", "{B257E9F4-DBE4-4449-B953-1FCD79A5A196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.BLInterfaces", "QulixProject.BLInterfaces\QulixProject.BLInterfaces.csproj", "{9CEDED80-3E70-41D3-9BDC-173C0F071C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.Services", "QulixProject.Services\QulixProject.Services.csproj", "{63D5136A-B698-48F4-8CB3-55E43CED2F11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QulixProject.UI", "QulixProject.UI\QulixProject.UI.csproj", "{537750F2-DFE8-450C-8CAF-D9E46C825531}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB1B8DDE-2944-4442-930D-9BC4E3E79A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB1B8DDE-2944-4442-930D-9BC4E3E79A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB1B8DDE-2944-4442-930D-9BC4E3E79A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB1B8DDE-2944-4442-930D-9BC4E3E79A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317F5E39-1F7C-4DD4-A68E-A86EF20F1300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317F5E39-1F7C-4DD4-A68E-A86EF20F1300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317F5E39-1F7C-4DD4-A68E-A86EF20F1300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317F5E39-1F7C-4DD4-A68E-A86EF20F1300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B257E9F4-DBE4-4449-B953-1FCD79A5A196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B257E9F4-DBE4-4449-B953-1FCD79A5A196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B257E9F4-DBE4-4449-B953-1FCD79A5A196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B257E9F4-DBE4-4449-B953-1FCD79A5A196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CEDED80-3E70-41D3-9BDC-173C0F071C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CEDED80-3E70-41D3-9BDC-173C0F071C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CEDED80-3E70-41D3-9BDC-173C0F071C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CEDED80-3E70-41D3-9BDC-173C0F071C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D5136A-B698-48F4-8CB3-55E43CED2F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D5136A-B698-48F4-8CB3-55E43CED2F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D5136A-B698-48F4-8CB3-55E43CED2F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D5136A-B698-48F4-8CB3-55E43CED2F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537750F2-DFE8-450C-8CAF-D9E46C825531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537750F2-DFE8-450C-8CAF-D9E46C825531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537750F2-DFE8-450C-8CAF-D9E46C825531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537750F2-DFE8-450C-8CAF-D9E46C825531}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal
